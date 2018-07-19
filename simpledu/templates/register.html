@@ -3,9 +3,10 @@
 {% block title%}Register{% endblock %}
 
 {% block body %}
-<h2>注册</h2>
 
 <div class="form">
+    <h2>注册</h2>
+
     <form method="POST" action="{{ url_for('front.register') }}">
         {{ form.csrf_token }}
         <div class="form-group">

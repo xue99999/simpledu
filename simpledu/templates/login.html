@@ -3,9 +3,10 @@
 {% block title%}Login{% endblock %}
 
 {% block body %}
-<h2>登陆</h2>
 
 <div class="form">
+    <h2>登陆</h2>
+
     <form method="POST" action="{{ url_for('front.login') }}">
         {{ form.csrf_token }}
         <div class="form-group">

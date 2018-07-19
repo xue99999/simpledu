@@ -10,13 +10,13 @@ def index():
     courses = Course.query.all()
     return render_template('index.html', courses=courses)
 
-@front.route('/login')
+@front.route('/login', methods=['GET', 'POST'])
 def login():
     form = LoginForm()
     return render_template('login.html', form=form)
 
     
-@front.route('/register')
+@front.route('/register', methods=['GET', 'POST'])
 def register():
     form = RegisterForm()
     return render_template('register.html', form=form)
